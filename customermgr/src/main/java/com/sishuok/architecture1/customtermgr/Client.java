@@ -23,10 +23,12 @@ public class Client {
         Client client = (Client) ctx.getBean("client");
         CustomerModel customer = new CustomerModel();
         customer.setShowName("jim");
-         client.customerDAO.create(customer);
+//        client.customerDAO.create(customer);
         CustomerQueryModel queryModel = new CustomerQueryModel();
         queryModel.setShowName("jim");
-        List<CustomerModel> modelList = client.customerDAO.getByCondition(queryModel);
+        queryModel.getPage().setPageShow(6);
+        queryModel.getPage().setNowPage(1);
+        List<CustomerModel> modelList = client.customerDAO.getByConditionByPage(queryModel);
         for (CustomerModel customerModel : modelList) {
             System.out.println(customerModel);
         }
