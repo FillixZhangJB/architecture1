@@ -2,10 +2,13 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/architecture1web" />
+    <file type="web" url="file://$PROJECT_DIR$/cartmgr" />
     <file type="web" url="file://$PROJECT_DIR$/common" />
     <file type="web" url="file://$PROJECT_DIR$/customermgr" />
     <file type="web" url="file://$PROJECT_DIR$/goodsmgr" />
     <file type="web" url="file://$PROJECT_DIR$/goodsmgrweb" />
+    <file type="web" url="file://$PROJECT_DIR$/ordermgr" />
+    <file type="web" url="file://$PROJECT_DIR$/storemgr" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,24 +16,14 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/cart/pom.xml" />
+        <option value="$PROJECT_DIR$/cartmgr/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

@@ -16,15 +16,11 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="customermgr" />
-    <orderEntry type="module" module-name="goodsmgrweb" />
-    <orderEntry type="module" module-name="storemgr" />
-    <orderEntry type="library" name="Maven: com.sishuok:cartmgr:war:0.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="module" module-name="ordermgr" />
     <orderEntry type="library" name="Maven: cglib:cglib:3.1" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
     <orderEntry type="library" name="Maven: asm:asm:3.3.1" level="project" />
