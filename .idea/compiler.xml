@@ -22,7 +22,7 @@
       <module name="architecture1web" target="1.7" />
       <module name="cart" target="1.7" />
       <module name="cartmgr" target="1.7" />
-      <module name="common" target="1.7" />
+      <module name="common" target="1.8" />
       <module name="customermgr" target="1.7" />
       <module name="goodsmgr" target="1.7" />
       <module name="goodsmgrweb" target="1.7" />

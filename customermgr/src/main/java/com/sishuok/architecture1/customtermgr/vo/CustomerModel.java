@@ -1,14 +1,30 @@
 package com.sishuok.architecture1.customtermgr.vo;
 
+import tk.mybatis.mapper.annotation.NameStyle;
+import tk.mybatis.mapper.annotation.Version;
+import tk.mybatis.mapper.code.Style;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Created by zjb on 2018/9/25.
  */
+@Table(name="tbl_customer")
 public class CustomerModel {
+    @Id
     private int uuid;
+    @Column(name="pwd")
     private String pwd;
+    @Column(name="customerId")
+    @Version
     private String customerId;
+    @Column(name="showName")
     private String showName;
+    @Column(name="trueName")
     private String trueName;
+    @Column(name="registerTime")
     private String registerTime;
 
     public int getUuid() {

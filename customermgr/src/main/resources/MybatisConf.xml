@@ -5,10 +5,7 @@
 		<typeAlias type="com.sishuok.architecture1.customtermgr.vo.CustomerModel" alias="CM"/>
 		<typeAlias type="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel" alias="CQM"/>
 	</typeAliases>
-	<plugins>
-		<plugin interceptor="com.sishuok.architecture1.customtermgr.pageutil.PagePlugin">
-			<property name="dialect" value="mysql"/>
-			<property name="pageSqlId" value=".*Page.*"/>
-		</plugin>
-	</plugins>
+	<!--<plugins>-->
+
+	<!--</plugins>-->
 </configuration> 
