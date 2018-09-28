@@ -3,6 +3,7 @@ package com.sishuok.architecture1.customtermgr;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.sishuok.architecture1.customtermgr.dao.CustomerMapper;
+import com.sishuok.architecture1.customtermgr.service.CustomerService;
 import com.sishuok.architecture1.customtermgr.vo.CustomerModel;
 import com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +19,14 @@ import java.util.List;
 @Service
 public class Client {
     @Autowired
-    private CustomerMapper customerMapper;
+    private CustomerService customerService;
 
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         Client client = (Client) ctx.getBean("client");
         CustomerModel customer = new CustomerModel();
         customer.setShowName("tt");
-        client.customerMapper.insert(customer);
-        PageHelper.startPage(1, 10);
-        List<CustomerModel> customerModels = client.customerMapper.selectAll();
-        PageInfo pageInfo = new PageInfo(customerModels);
-
-//        CustomerQueryModel queryModel = new CustomerQueryModel();
-//        queryModel.setShowName("jim");
+        client.customerService.insert(customer);
+        PageInfo<CustomerModel> pageInfo = client.customerService.selectAllByPage(1, 2);
     }
 }
