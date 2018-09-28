@@ -1,5 +1,7 @@
 package com.sishuok.architecture1.customtermgr;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.sishuok.architecture1.customtermgr.dao.CustomerMapper;
 import com.sishuok.architecture1.customtermgr.vo.CustomerModel;
 import com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel;
@@ -24,6 +26,10 @@ public class Client {
         CustomerModel customer = new CustomerModel();
         customer.setShowName("tt");
         client.customerMapper.insert(customer);
+        PageHelper.startPage(1, 10);
+        List<CustomerModel> customerModels = client.customerMapper.selectAll();
+        PageInfo pageInfo = new PageInfo(customerModels);
+
 //        CustomerQueryModel queryModel = new CustomerQueryModel();
 //        queryModel.setShowName("jim");
     }

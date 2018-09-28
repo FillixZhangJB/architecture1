@@ -5,7 +5,10 @@
 		<typeAlias type="com.sishuok.architecture1.customtermgr.vo.CustomerModel" alias="CM"/>
 		<typeAlias type="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel" alias="CQM"/>
 	</typeAliases>
-	<!--<plugins>-->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!-- config params as the following -->
 
-	<!--</plugins>-->
+		</plugin>
+	</plugins>
 </configuration> 
