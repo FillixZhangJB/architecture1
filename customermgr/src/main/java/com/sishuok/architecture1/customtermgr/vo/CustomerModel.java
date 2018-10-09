@@ -1,38 +1,36 @@
 package com.sishuok.architecture1.customtermgr.vo;
 
-import tk.mybatis.mapper.annotation.NameStyle;
-import tk.mybatis.mapper.annotation.Version;
-import tk.mybatis.mapper.code.Style;
-
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 /**
  * Created by zjb on 2018/9/25.
  */
-@Table(name="tbl_customer")
+@Table(name = "tbl_customer")
 public class CustomerModel {
     @Id
-    private int uuid;
-    @Column(name="pwd")
-    private String pwd;
-    @Column(name="customerId")
     @Version
+    @Column(name = "uuId")
+    private String uuId;
+    @Column(name = "pwd")
+    private String pwd;
+    @Column(name = "customerId")
     private String customerId;
-    @Column(name="showName")
+    @Column(name = "showName")
     private String showName;
-    @Column(name="trueName")
+    @Column(name = "trueName")
     private String trueName;
-    @Column(name="registerTime")
+    @Column(name = "registerTime")
     private String registerTime;
 
-    public int getUuid() {
-        return uuid;
+    public String getUuId() {
+        return uuId;
     }
 
-    public void setUuid(int uuid) {
-        this.uuid = uuid;
+    public void setUuId(String uuId) {
+        this.uuId = uuId;
     }
 
     public String getPwd() {
@@ -82,7 +80,7 @@ public class CustomerModel {
 
         CustomerModel that = (CustomerModel) o;
 
-        if (uuid != that.uuid) return false;
+        if (uuId != that.uuId) return false;
         if (pwd != null ? !pwd.equals(that.pwd) : that.pwd != null) return false;
         if (customerId != null ? !customerId.equals(that.customerId) : that.customerId != null) return false;
         if (showName != null ? !showName.equals(that.showName) : that.showName != null) return false;
@@ -92,7 +90,7 @@ public class CustomerModel {
 
     @Override
     public int hashCode() {
-        int result = uuid;
+        int result = uuId != null ? uuId.hashCode() : 0;
         result = 31 * result + (pwd != null ? pwd.hashCode() : 0);
         result = 31 * result + (customerId != null ? customerId.hashCode() : 0);
         result = 31 * result + (showName != null ? showName.hashCode() : 0);
@@ -104,7 +102,7 @@ public class CustomerModel {
     @Override
     public String toString() {
         return "CustomerModel{" +
-                "uuid=" + uuid +
+                "uuId=" + uuId +
                 ", pwd='" + pwd + '\'' +
                 ", customerId='" + customerId + '\'' +
                 ", showName='" + showName + '\'' +

@@ -6,5 +6,13 @@ package com.sishuok.architecture1.customtermgr.vo;
  */
 public class CustomerQueryModel extends CustomerModel {
 
+    private String queryJsonStr;
 
+    public String getQueryJsonStr() {
+        return queryJsonStr;
+    }
+
+    public void setQueryJsonStr(String queryJsonStr) {
+        this.queryJsonStr = queryJsonStr;
+    }
 }
