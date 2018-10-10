@@ -1,5 +1,7 @@
 package com.sishuok.architecture1.customtermgr.vo;
 
+import com.sishuok.architecture1.common.model.BaseModel;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,7 +11,7 @@ import javax.persistence.Version;
  * Created by zjb on 2018/9/25.
  */
 @Table(name = "tbl_customer")
-public class CustomerModel {
+public class CustomerModel extends BaseModel{
     @Id
     @Version
     @Column(name = "uuId")

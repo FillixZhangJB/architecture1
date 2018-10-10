@@ -27,6 +27,13 @@ public class CustomerController {
         return LeeJSONResult.ok(pageInfo);
     }
 
+    @RequestMapping(value = "/selectByConditionPage", method = RequestMethod.GET)
+    @ResponseBody
+    public LeeJSONResult selectByConditionPage() {
+        PageInfo<CustomerQueryModel> pageInfo = customerService.selectByConditionPage(new CustomerQueryModel());
+        return LeeJSONResult.ok(pageInfo);
+    }
+
     @RequestMapping(value = "toAdd", method = RequestMethod.GET)
     public String toAdd() {
         return "customer/add";
