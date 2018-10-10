@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 		"
 >
-    <context:component-scan base-package="com.sishuok.architecture1.customtermgr">
+    <context:component-scan base-package="com.sishuok.architecture1.front">
         <context:exclude-filter type="annotation"
                                 expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>

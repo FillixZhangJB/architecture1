@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>storemgr</artifactId>
+    <artifactId>front</artifactId>
     <packaging>war</packaging>
 
-    <name>storemgr Maven Webapp</name>
+    <name>front Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -23,10 +23,49 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.sishuok</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sishuok</groupId>
+            <artifactId>cartmgr</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <classifier>api</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.sishuok</groupId>
+            <artifactId>customermgr</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <classifier>api</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.sishuok</groupId>
+            <artifactId>goodsmgr</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sishuok</groupId>
+            <artifactId>ordermgr</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <classifier>api</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.sishuok</groupId>
+            <artifactId>ordermgr</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <classifier>api</classifier>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>storemgr</finalName>
+        <finalName>front</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
@@ -66,25 +105,13 @@
                         <scanIntervalSeconds>10</scanIntervalSeconds>
                         <stopPort>9999</stopPort>
                         <webApp>
-                            <contextPath>/store</contextPath>
+                            <contextPath>/</contextPath>
                         </webApp>
                         <httpConnector>
                             <port>9080</port>
                             <idleTimeout>60000</idleTimeout>
                         </httpConnector>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <configuration>
-                        <!--注意增加这两行，在打包时相关的类会被独立打成jar -->
-                        <attachClasses>true</attachClasses>
-                        <classesClassifier>api</classesClassifier>
-                    </configuration>
-                    <version>2.4</version>
-                    <executions>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
