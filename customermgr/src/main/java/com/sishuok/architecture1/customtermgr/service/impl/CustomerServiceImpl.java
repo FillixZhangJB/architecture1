@@ -72,6 +72,11 @@ public class CustomerServiceImpl implements CustomerService {
         return customerQueryModelPageInfo;
     }
 
+    @Override
+    public CustomerModel selectByCustomerId(String customerId) {
+        return customerMapper.selectByCustomerId(customerId);
+    }
+
     public Page<CustomerQueryModel> selectPageByCondition(CustomerQueryModel customerQueryModel) {
         Example example = new Example(CustomerModel.class);
         return null;

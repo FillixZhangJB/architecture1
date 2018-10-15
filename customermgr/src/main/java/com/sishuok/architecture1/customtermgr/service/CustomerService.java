@@ -21,5 +21,7 @@ public interface CustomerService {
 
     PageInfo<CustomerQueryModel> selectByConditionPage(CustomerQueryModel cqm);
 
+    CustomerModel selectByCustomerId(String customerId);
+
 
 }

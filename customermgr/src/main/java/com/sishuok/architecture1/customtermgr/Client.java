@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by zjb on 2018/9/26.
  */
-@Service
+//@Service
 public class Client {
     @Autowired
     private CustomerService customerService;

@@ -30,4 +30,18 @@
         </where>
 
     </select>
+    <select id="selectByCustomerId" resultType="com.sishuok.architecture1.customtermgr.vo.CustomerModel"
+            parameterType="String">
+        SELECT
+	        t.customerId,
+	        t.uuId,
+	        t.pwd,
+	        t.registerTime,
+	        t.showName,
+	        t.trueName
+        FROM
+	        tbl_customer t
+        WHERE
+	        t.customerId = #{customerId}
+    </select>
 </mapper>
