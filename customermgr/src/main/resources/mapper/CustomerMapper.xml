@@ -3,7 +3,7 @@
 <mapper namespace="com.sishuok.architecture1.customtermgr.dao.CustomerMapper">
 
     <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
-    <select id="selectByCondition" parameterType="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel"
+<select id="selectByCondition" parameterType="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel"
             resultType="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel">
         SELECT
         t.uuId,
@@ -30,6 +30,7 @@
         </where>
 
     </select>
+
     <select id="selectByCustomerId" resultType="com.sishuok.architecture1.customtermgr.vo.CustomerModel"
             parameterType="String">
         SELECT

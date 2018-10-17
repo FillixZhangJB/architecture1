@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sishuok.architecture1.cartmgr.dao.TblCartMapper">
+    <resultMap id="BaseResultMap" type="com.sishuok.architecture1.cartmgr.vo.TblCart">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="uuid" jdbcType="INTEGER" property="uuid"/>
+        <result column="customerUuid" jdbcType="INTEGER" property="customeruuid"/>
+        <result column="goodsUuid" jdbcType="INTEGER" property="goodsuuid"/>
+        <result column="buyNum" jdbcType="INTEGER" property="buynum"/>
+    </resultMap>
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    <select id="selectByCondition" parameterType="com.sishuok.architecture1.cartmgr.vo.TblCart"
+            resultMap="BaseResultMap">
+        SELECT
+        t.uuid,
+        t.buyNum,
+        t.customerUuid,
+        t.goodsUuid
+        FROM
+        tbl_cart t
+        <where>
+            <if test="uuid!=null and uuid!='' and uuid!='null' and uuid!='undefined'">
+                AND t.uuid=#{uuid}
+            </if>
+            <if test="buynum!=null and buynum!='' and buynum!='null' and buynum!='undefined'">
+                AND t.buynum = #{buynum}
+            </if>
+            <if test="customerUuid!=null and customerUuid!='' and customerUuid!='null' and customerUuid!='undefined'">
+                AND t.customerUuid = #{customerUuid}
+            </if>
+            <if test="goodsUuid!=null and goodsUuid!='' and goodsUuid!='null' and goodsUuid!='undefined'">
+                AND t.goodsUuid = #{goodsUuid}
+            </if>
+        </where>
+
+    </select>
+
+</mapper>

@@ -16,6 +16,7 @@
         <module>storemgr</module>
         <module>ordermgr</module>
         <module>front</module>
+        <module>cartmgr</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

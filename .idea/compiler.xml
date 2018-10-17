@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="architecture1web" />
         <module name="cart" />
+        <module name="cartmgr" />
         <module name="common" />
         <module name="customermgr" />
         <module name="front" />

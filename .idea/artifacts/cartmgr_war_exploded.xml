@@ -1,29 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="front:war exploded">
-    <output-path>$PROJECT_DIR$/front/target/front</output-path>
+  <artifact type="exploded-war" name="cartmgr:war exploded">
+    <output-path>$PROJECT_DIR$/cartmgr/target/cartmgr</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="front" />
+          <element id="module-output" name="cartmgr" />
         </element>
         <element id="directory" name="lib">
           <element id="archive" name="common-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="common" />
-          </element>
-          <element id="archive" name="customermgr-0.0.1-SNAPSHOT-api.jar">
-            <element id="module-output" name="customermgr" />
-          </element>
-          <element id="archive" name="goodsmgr-0.0.1-SNAPSHOT.jar">
-            <element id="module-output" name="goodsmgr" />
-          </element>
-          <element id="archive" name="ordermgr-0.0.1-SNAPSHOT-api.jar">
-            <element id="module-output" name="ordermgr" />
-          </element>
-          <element id="archive" name="storemgr-0.0.1-SNAPSHOT-api.jar">
-            <element id="module-output" name="storemgr" />
-          </element>
-          <element id="archive" name="cartmgr-0.0.1-SNAPSHOT-api.jar">
-            <element id="module-output" name="cartmgr" />
           </element>
           <element id="library" level="project" name="Maven: cglib:cglib:3.1" />
           <element id="library" level="project" name="Maven: org.ow2.asm:asm:4.2" />
@@ -68,9 +53,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/front/target/front/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/cartmgr/target/cartmgr/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="front/web/Web" />
+      <element id="javaee-facet-resources" facet="cartmgr/web/Web" />
     </root>
   </artifact>
 </component>
