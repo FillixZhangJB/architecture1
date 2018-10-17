@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="architecture1web" />
         <module name="cart" />
-        <module name="cartmgr" />
         <module name="common" />
         <module name="customermgr" />
         <module name="front" />
@@ -30,6 +29,7 @@
       <module name="goodsmgrweb" target="1.7" />
       <module name="ordermgr" target="1.7" />
       <module name="storemgr" target="1.7" />
+      <module name="test" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

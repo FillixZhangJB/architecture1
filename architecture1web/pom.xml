@@ -44,12 +44,6 @@
         </dependency>
         <dependency>
             <groupId>com.sishuok</groupId>
-            <artifactId>cartmgr</artifactId>
-            <type>war</type>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sishuok</groupId>
             <artifactId>ordermgr</artifactId>
             <type>war</type>
             <version>0.0.1-SNAPSHOT</version>

@@ -13,7 +13,6 @@
         <module>customermgr</module>
         <module>goodsmgr</module>
         <module>goodsmgrweb</module>
-        <module>cartmgr</module>
         <module>storemgr</module>
         <module>ordermgr</module>
         <module>front</module>

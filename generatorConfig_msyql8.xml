@@ -19,14 +19,14 @@
         </jdbcConnection>
 
         <!-- 对于生成的model所在包 -->
-        <javaModelGenerator targetPackage="com.sishuok.architecture1.goodsmgr.vo" targetProject="goodsmgr/src/main/java"/>
+        <javaModelGenerator targetPackage="com.sishuok.architecture1.cartmgr.vo" targetProject="cartmgr/src/main/java"/>
 
         <!-- 生成的mapper.xml所在目录 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="goodsmgr/src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="cartmgr/src/main/resources"/>
 
         <!-- 配置mapper对应的java映射 -->
-        <javaClientGenerator targetPackage="com.sishuok.architecture1.goodsmgr.dao" targetProject="goodsmgr/src/main/java"
+        <javaClientGenerator targetPackage="com.sishuok.architecture1.cartmgr.dao" targetProject="cartmgr/src/main/java"
                              type="XMLMAPPER"/>
-        <table tableName="tbl_goods"></table>
+        <table tableName="tbl_cart"></table>
     </context>
 </generatorConfiguration>

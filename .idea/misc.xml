@@ -11,6 +11,7 @@
     <file type="web" url="file://$PROJECT_DIR$/goodsmgrweb" />
     <file type="web" url="file://$PROJECT_DIR$/ordermgr" />
     <file type="web" url="file://$PROJECT_DIR$/storemgr" />
+    <file type="web" url="file://$PROJECT_DIR$/test" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -22,6 +23,7 @@
       <set>
         <option value="$PROJECT_DIR$/cart/pom.xml" />
         <option value="$PROJECT_DIR$/cartmgr/pom.xml" />
+        <option value="$PROJECT_DIR$/test/pom.xml" />
       </set>
     </option>
   </component>

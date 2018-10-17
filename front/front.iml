@@ -26,7 +26,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="common" />
-    <orderEntry type="library" name="Maven: com.sishuok:cartmgr:api:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="customermgr" />
     <orderEntry type="module" module-name="goodsmgr" />
     <orderEntry type="module" module-name="ordermgr" />

@@ -31,13 +31,6 @@
 
         <dependency>
             <groupId>com.sishuok</groupId>
-            <artifactId>cartmgr</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <type>jar</type>
-            <classifier>api</classifier>
-        </dependency>
-        <dependency>
-            <groupId>com.sishuok</groupId>
             <artifactId>customermgr</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>jar</type>
