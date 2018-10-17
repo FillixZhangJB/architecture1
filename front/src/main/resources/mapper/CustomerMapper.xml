@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sishuok.architecture1.customtermgr.dao.CustomerMapper">
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    <select id="selectByCondition" parameterType="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel"
+            resultType="com.sishuok.architecture1.customtermgr.vo.CustomerQueryModel">
+        SELECT
+        t.uuId,
+        t.customerId,
+        t.pwd,
+        t.showName,
+        t.trueName,
+        t.registerTime
+        FROM
+        tbl_customer t
+        <where>
+            <if test="customerId!=null and customerId!='' and customerId!='null' and customerId!='undefined'">
+                AND t.trueName=#{customerId}
+            </if>
+            <if test="pwd!=null and pwd!='' and pwd!='null' and pwd!='undefined'">
+                AND t.pwd = #{pwd}
+            </if>
+            <if test="showName!=null and showName!='' and showName!='null' and showName!='undefined'">
+                AND t.showName = #{showName}
+            </if>
+            <if test="trueName!=null and trueName!='' and trueName!='null' and trueName!='undefined'">
+                AND t.trueName LIKE CONCAT(CONCAT('%', #{showName}),'%'
+            </if>
+        </where>
+
+    </select>
+    <select id="selectByCustomerId" resultType="com.sishuok.architecture1.customtermgr.vo.CustomerModel"
+            parameterType="String">
+        SELECT
+	        t.customerId,
+	        t.uuId,
+	        t.pwd,
+	        t.registerTime,
+	        t.showName,
+	        t.trueName
+        FROM
+	        tbl_customer t
+        WHERE
+	        t.customerId = #{customerId}
+    </select>
+</mapper>

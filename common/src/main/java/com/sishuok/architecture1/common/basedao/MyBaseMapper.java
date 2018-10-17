@@ -1,4 +1,4 @@
-package com.sishuok.architecture1.common.dao;
+package com.sishuok.architecture1.common.basedao;
 
 import tk.mybatis.mapper.common.Mapper;
 

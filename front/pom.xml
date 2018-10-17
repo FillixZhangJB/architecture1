@@ -57,7 +57,7 @@
         </dependency>
         <dependency>
             <groupId>com.sishuok</groupId>
-            <artifactId>ordermgr</artifactId>
+            <artifactId>storemgr</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <type>jar</type>
             <classifier>api</classifier>

@@ -39,6 +39,5 @@
     </bean>
     <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.sishuok.architecture1.customtermgr.dao"/>
-        <property name="annotationClass" value="org.springframework.stereotype.Repository"></property>
     </bean>
 </beans>
