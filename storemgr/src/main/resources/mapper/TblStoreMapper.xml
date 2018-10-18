@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sishuok.architectrue1.storemgr.dao.TblStoreMapper">
+    <resultMap id="BaseResultMap" type="com.sishuok.architectrue1.storemgr.vo.TblStore">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="uuid" jdbcType="INTEGER" property="uuid"/>
+        <result column="goodsUuid" jdbcType="INTEGER" property="goodsUuid"/>
+        <result column="storeNum" jdbcType="INTEGER" property="storeNum"/>
+    </resultMap>
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    <select id="selectByCondition" parameterType="com.sishuok.architectrue1.storemgr.vo.TblStore"
+            resultMap="BaseResultMap">
+        SELECT
+        t.uuid,
+        t.goodsUuid,
+        t.storeNum
+        FROM
+        tbl_store t
+        <where>
+            <if test="uuid!=null and uuid!='' and uuid!='null' and uuid!='undefined'">
+                AND t.uuid=#{uuid}
+            </if>
+            <if test="goodsUuid!=null and goodsUuid!='' and goodsUuid!='null' and goodsUuid!='undefined'">
+                AND t.goodsUuid = #{goodsUuid}
+            </if>
+            <if test="storeNum!=null and storeNum!='' and storeNum!='null' and storeNum!='undefined'">
+                AND t.storeNum = #{storeNum}
+            </if>
+        </where>
+
+    </select>
+</mapper>

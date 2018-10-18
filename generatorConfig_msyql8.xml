@@ -19,14 +19,16 @@
         </jdbcConnection>
 
         <!-- 对于生成的model所在包 -->
-        <javaModelGenerator targetPackage="com.sishuok.architecture1.ordermgr.vo" targetProject="ordermgr/src/main/java"/>
+        <javaModelGenerator targetPackage="com.sishuok.architectrue1.storemgr.vo"
+                            targetProject="storemgr/src/main/java"/>
 
         <!-- 生成的mapper.xml所在目录 -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="ordermgr/src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="storemgr/src/main/resources"/>
 
         <!-- 配置mapper对应的java映射 -->
-        <javaClientGenerator targetPackage="com.sishuok.architecture1.ordermgr.dao" targetProject="ordermgr/src/main/java"
+        <javaClientGenerator targetPackage="com.sishuok.architectrue1.storemgr.dao"
+                             targetProject="storemgr/src/main/java"
                              type="XMLMAPPER"/>
-        <table tableName="tbl_order"></table>
+        <table tableName="tbl_store"></table>
     </context>
 </generatorConfiguration>
