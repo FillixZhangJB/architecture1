@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sishuok.architecture1.ordermgr.dao.TblOrderMapper">
+    <resultMap id="BaseResultMap" type="com.sishuok.architecture1.ordermgr.vo.TblOrder">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="uuid" jdbcType="INTEGER" property="uuid"/>
+        <result column="customerUuid" jdbcType="INTEGER" property="customerUuid"/>
+        <result column="orderTime" jdbcType="VARCHAR" property="orderTime"/>
+        <result column="totalMoney" jdbcType="REAL" property="totalMoney"/>
+        <result column="saveMoney" jdbcType="REAL" property="saveMoney"/>
+        <result column="state" jdbcType="SMALLINT" property="state"/>
+    </resultMap>
+
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    <select id="selectByCondition" parameterType="com.sishuok.architecture1.ordermgr.vo.TblOrder"
+            resultMap="BaseResultMap">
+        SELECT
+        t.uuid,
+        t.customerUuid,
+        t.orderTime,
+        t.saveMoney,
+        t.state,
+        t.totalMoney
+        FROM
+        tbl_order t
+        <where>
+            <if test="uuid!=null and uuid!='' and uuid!='null' and uuid!='undefined'">
+                AND t.uuid=#{uuid}
+            </if>
+            <if test="orderTime!=null and orderTime!='' and orderTime!='null' and orderTime!='undefined'">
+                AND t.orderTime = #{orderTime}
+            </if>
+            <if test="customerUuid!=null and customerUuid!='' and customerUuid!='null' and customerUuid!='undefined'">
+                AND t.customerUuid = #{customerUuid}
+            </if>
+            <if test="saveMoney!=null and saveMoney!='' and saveMoney!='null' and saveMoney!='undefined'">
+                AND t.saveMoney = #{saveMoney}
+            </if>
+            <if test="state!=null and state!='' and state!='null' and state!='undefined'">
+                AND t.state = #{state}
+            </if>
+            <if test="totalMoney!=null and totalMoney!='' and totalMoney!='null' and totalMoney!='undefined'">
+                AND t.totalMoney = #{totalMoney}
+            </if>
+        </where>
+
+    </select>
+</mapper>

@@ -41,6 +41,6 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!--配置mapper包扫描，多个包可用，或；等分隔，详细见源码-->
         <property name="basePackage"
-                  value="com.sishuok.architecture1.goodsmgr.dao;com.sishuok.architecture1.customtermgr.dao"/>
+                  value="com.sishuok.architecture1.cartmgr.dao;com.sishuok.architecture1.goodsmgr.dao;com.sishuok.architecture1.customtermgr.dao;com.sishuok.architecture1.ordermgr.dao;com.sishuok.architectrue1.storemgr.dao"/>
     </bean>
 </beans>

@@ -36,9 +36,9 @@ public class LoginController {
         if (customerModel == null || !customerModel.getPwd().equals(pwd)) {
             return "login";
         }
-        Cookie cookie = new Cookie("MyLogin", customerModel.getUuId() + System.currentTimeMillis());
+        Cookie cookie = new Cookie("MyLogin", customerModel.getUuId() + "," + System.currentTimeMillis());
         response.addCookie(cookie);
-        return "index";
+        return "redirect:toIndex";
     }
 
 }
