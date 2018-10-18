@@ -28,8 +28,8 @@
             <if test="name!=null and name!='' and name!='null' and name!='undefined'">
                 AND t.name = #{name}
             </if>
-            <if test="imgPath!=null and imgPath!='' and imgPath!='null' and imgPath!='undefined'">
-                AND t.imgPath = #{imgPath}
+            <if test="imgpath!=null and imgpath!='' and imgpath!='null' and imgpath!='undefined'">
+                AND t.imgPath = #{imgpath}
             </if>
             <if test="description!=null and description!='' and description!='null' and description!='undefined'">
                 AND t.description LIKE CONCAT(CONCAT('%', #{description}),'%'

@@ -29,15 +29,15 @@
 	</tr>
 	<tr>
 		<td>客户编号</td>
-		<td><input type="text" uuId="customerId" name="customerId" class="input"></td>
+		<td><input type="text" id="customerId" name="customerId" class="input"></td>
 		<td>客户密码</td>
-		<td><input type="text" uuId="pwd" name="pwd" class="input"></td>
+		<td><input type="text" id="pwd" name="pwd" class="input"></td>
 	</tr>
 	<tr>
 		<td>显示名称</td>
-		<td><input type="text" uuId="showName" name="showName" class="input"></td>
+		<td><input type="text" id="showName" name="showName" class="input"></td>
 		<td>真实姓名</td>
-		<td><input type="text" uuId="trueName" name="trueName" class="input"></td>
+		<td><input type="text" id="trueName" name="trueName" class="input"></td>
 	</tr>		
 	<tr>
 		<td colspan=4 align=center><input id="btn_query" type="button" value="查询" class="button"></td>
